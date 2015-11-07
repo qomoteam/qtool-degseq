@@ -1,6 +1,6 @@
 <tools>
 	<tool id="degseq" name="DEGseq" category="Differential expression analysis" contributors='Qomo team'>
-		<command>#{HADOOP_BIN} jar diffexpress-tool-0.0.1-SNAPSHOT-jar-with-dependencies.jar qomo.diffexpr.DEGSeqTool -libjars #{QOMO_COMMON} #{tmp} #{input} #{output} #{groups} #{model}</command>
+		<command>#{HADOOP_BIN} jar diffexpress-tool-0.0.1-SNAPSHOT-jar-with-dependencies.jar qomo.diffexpr.DEGSeqTool -libjars #{QOMO_COMMON} #{tmp} #{input} #{output} "#{groups}" #{model}</command>
 		<params>
 			<input name="input" label="Expression" format="csv" />
 			<string name="groups" label="Column groups" value="{ 7, 9, 12, 15, 18 }, { 8, 10, 11, 13, 16 }" />
