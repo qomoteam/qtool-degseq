@@ -34,10 +34,11 @@
 			<artifactId>qomo-common</artifactId>
 			<version>1.0.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-client</artifactId>
-			<version>2.0.0-mr1-cdh4.3.0</version>
+			<version>2.7.0-mapr-1506</version>
 			<scope>provided</scope>
 			<exclusions>
 				<exclusion>
@@ -74,6 +75,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -89,7 +91,7 @@
 	<repositories>
 		<repository>
 			<id>CBB repository</id>
-			<url>http://host2.internal.cbb.big.ac.cn/nexus/content/groups/public/</url>
+			<url>http://cloud.big.ac.cn/mvn/content/groups/public/</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>

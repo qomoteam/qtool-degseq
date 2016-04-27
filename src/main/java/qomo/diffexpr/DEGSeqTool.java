@@ -2,6 +2,7 @@ package qomo.diffexpr;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
+import org.apache.hadoop.util.GenericOptionsParser;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
@@ -17,7 +18,8 @@ public class DEGSeqTool extends Configured implements Tool {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
-		int res = ToolRunner.run(conf, new DEGSeqTool(), args);
+		String[] remainArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+		int res = ToolRunner.run(conf, new DEGSeqTool(), remainArgs);
 		System.exit(res);
 	}
 
